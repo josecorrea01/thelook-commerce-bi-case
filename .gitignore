@@ -1,0 +1,32 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# JetBrains
+.idea/
+*.iml
+
+# Python notebooks / temp
+.ipynb_checkpoints/
+
+# Logs / temp
+*.log
+tmp/
+temp/
+
+# Environment
+.env
+.env.*
+
+# Build / cache
+dist/
+build/
+out/
+target/
+node_modules/
+
+# Optional: system files
+desktop.ini
