@@ -48,11 +48,18 @@ Source tables:
 - `bigquery-public-data.thelook_ecommerce.order_items`
 - `bigquery-public-data.thelook_ecommerce.products`
 
+Curated dataset:
+
+- `thelook-bi-practice.thelook_bi_curated.stg_order_items_enriched`
+- `thelook-bi-practice.thelook_bi_curated.mart_daily_kpis`
+- `thelook-bi-practice.thelook_bi_curated.mart_category_performance`
+
 Environment:
 
 - Google BigQuery
 - GoogleSQL
-- Public dataset in region **US**
+- Public source data in region **US**
+- Curated analytical assets materialized in a private dataset
 
 ---
 
@@ -90,7 +97,8 @@ This step ensured that the analytical model would be built on top of a reliable 
 
 ### 2. Staging Layer
 
-**File:** `sql/01_staging/stg_order_items_enriched.sql`
+**File:** `sql/01_staging/stg_order_items_enriched.sql`  
+**Materialized as:** `thelook-bi-practice.thelook_bi_curated.stg_order_items_enriched`
 
 This layer creates an enriched order-item-level analytical base by:
 
@@ -113,6 +121,8 @@ Derived fields include:
 
 #### `mart_daily_kpis.sql`
 
+**Materialized as:** `thelook-bi-practice.thelook_bi_curated.mart_daily_kpis`
+
 Daily KPI mart for business monitoring.
 
 Main outputs:
@@ -125,6 +135,8 @@ Main outputs:
 - `revenue_vs_previous_day`
 
 #### `mart_category_performance.sql`
+
+**Materialized as:** `thelook-bi-practice.thelook_bi_curated.mart_category_performance`
 
 Category and product performance mart.
 
