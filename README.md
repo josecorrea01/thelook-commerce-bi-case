@@ -53,6 +53,7 @@ Curated dataset:
 - `thelook-bi-practice.thelook_bi_curated.stg_order_items_enriched`
 - `thelook-bi-practice.thelook_bi_curated.mart_daily_kpis`
 - `thelook-bi-practice.thelook_bi_curated.mart_category_performance`
+- `thelook-bi-practice.thelook_bi_curated.mart_shipping_performance`
 
 Environment:
 
@@ -148,6 +149,21 @@ Main outputs:
 - `product_order_item_count`
 - `category_revenue_share`
 - `product_rank_in_category`
+
+#### `mart_shipping_performance.sql`
+
+**Materialized as:** `thelook-bi-practice.thelook_bi_curated.mart_shipping_performance`
+
+Shipping performance mart focused on delivery timing and operational behavior.
+
+Main outputs:
+
+- `shipped_orders`
+- `avg_shipped_to_delivered_days`
+- `min_shipped_to_delivered_days`
+- `max_shipped_to_delivered_days`
+- `rolling_7d_avg_shipping_days`
+- `shipping_days_vs_previous_day`
 
 ### 4. Semantic Layer Concept
 
@@ -259,14 +275,13 @@ This version includes:
 - staging layer
 - daily KPI mart
 - category performance mart
+- shipping performance mart
 - conceptual semantic layer
 
 ## Possible Extensions
 
 Near-term extensions:
 
-- shipping performance mart
-- materialized curated tables in a private dataset
 - dashboard implementation
 
 Longer-term extensions:
