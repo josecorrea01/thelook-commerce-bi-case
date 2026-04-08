@@ -174,6 +174,7 @@ Files:
 - `lookml/ecommerce_case.model.lkml`
 - `lookml/daily_kpis.view.lkml`
 - `lookml/category_performance.view.lkml`
+- `lookml/shipping_performance.view.lkml`
 
 This layer defines a simple semantic structure with:
 
